@@ -5,7 +5,7 @@ import { UserContext } from "../context/UserContext";
 import { useContext, useState } from "react";
 
 export default function Register() {
-    // ---. getting data from userContext that's in context
+    // getting data from userContext that's in context
     const {addUser} = useContext(UserContext)
 
     // const [name, setname] = useState('')

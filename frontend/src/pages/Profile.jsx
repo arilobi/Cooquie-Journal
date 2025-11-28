@@ -3,13 +3,13 @@ import { UserContext } from "../context/UserContext";
 import profile from "../assets/profile.jpeg";
 
 export default function Profile() {
-  const { current_user, updateUser } = useContext(UserContext); // ---> Assuming `updateUser` is a function to update the user
-  const [editMode, setEditMode] = useState(false); // ---> State to toggle between edit/view mode
+  const { current_user, updateUser } = useContext(UserContext); 
+  const [editMode, setEditMode] = useState(false); 
   const [updatedName, setUpdatedName] = useState(current_user ? current_user.name : "");
   const [updatedEmail, setUpdatedEmail] = useState(current_user ? current_user.email : "");
 
   useEffect(() => {
-    // ---> Whenever the current_user changes, update the local state for profile
+    //  Whenever the current_user changes, update the local state for profile
     if (current_user) {
       setUpdatedName(current_user.name);
       setUpdatedEmail(current_user.email);
@@ -17,17 +17,17 @@ export default function Profile() {
   }, [current_user]);
 
   const handleUpdateProfile = () => {
-    // ---> When the update button is clicked, toggle edit mode
+    //  When the update button is clicked, toggle edit mode
     setEditMode(true);
   };
 
   const handleSaveProfile = () => {
-    // ---> Save the updated information and pass userId to the updateUser function
-    const userId = current_user.id; // Assuming current_user has an id field
+    //  Save the updated information and pass userId to the updateUser function
+    const userId = current_user.id; 
 
-    updateUser(userId, updatedName, updatedEmail); // ---> Call the context function to update user data
+    updateUser(userId, updatedName, updatedEmail); 
 
-    // ---> Exit edit mode
+    //  Exit edit mode
     setEditMode(false);
   };
 

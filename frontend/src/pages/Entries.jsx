@@ -34,10 +34,10 @@ export default function Entries() {
     return () => observer.disconnect();
   }, []);
 
-  // Reverse entries for newest first
+  // Reverse entries for the new entries to come first
   const reversedEntries = entries ? [...entries].reverse() : [];
 
-  // Pagination calculations
+  // Pagination area
   const totalEntries = reversedEntries.length;
   const totalPages = Math.ceil(totalEntries / entriesPerPage);
 

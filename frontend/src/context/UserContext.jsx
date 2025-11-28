@@ -13,7 +13,7 @@ export const UserProvider = ({ children }) => {
   // LOGIN
   const login = (email, password) => {
     alert("Logging you in...");
-    fetch("http://127.0.0.1:5000/login2", {
+    fetch("https://cooquie-journal.onrender.com/login2", {
       method: "POST",
       headers: {
         "Content-type": "application/json",
@@ -30,7 +30,7 @@ export const UserProvider = ({ children }) => {
           sessionStorage.setItem("token", response.access_token);
           setAuthToken(response.access_token);
 
-          fetch("http://127.0.0.1:5000/current_user", {
+          fetch("https://cooquie-journal.onrender.com/current_user", {
             method: "GET",
             headers: {
               "Content-type": "application/json",
@@ -57,7 +57,7 @@ export const UserProvider = ({ children }) => {
     {
         alert("Logging out ...");
         
-        fetch("http://127.0.0.1:5000/logout",{
+        fetch("https://cooquie-journal.onrender.com/logout",{
             method: "DELETE",
             headers: {
                 'Content-type': 'application/json',
@@ -94,7 +94,7 @@ export const UserProvider = ({ children }) => {
   const fetchCurrentUser = () => {
     console.log("Current user fcn ", authToken);
 
-    fetch("http://127.0.0.1:5000/current_user", {
+    fetch("https://cooquie-journal.onrender.com/current_user", {
       method: "GET",
       headers: {
         "Content-type": "application/json",
@@ -112,7 +112,7 @@ export const UserProvider = ({ children }) => {
   // ADD user
   const addUser = (name, email, password) => {
     alert("Registering...");
-    fetch("http://127.0.0.1:5000/users", {
+    fetch("https://cooquie-journal.onrender.com/users", {
       method: "POST",
       headers: {
         "Content-type": "application/json",
@@ -139,7 +139,7 @@ export const UserProvider = ({ children }) => {
   const updateUser = (user_id, updatedName, updatedEmail) => {
     console.log("Updating user:", user_id);
     alert("Updating User...");
-    fetch(`http://127.0.0.1:5000/users/${user_id}`, {
+    fetch(`https://cooquie-journal.onrender.com/users/${user_id}`, {
       method: "PATCH",
       headers: {
         "Content-type": "application/json",
@@ -168,7 +168,7 @@ export const UserProvider = ({ children }) => {
   const deleteUser = async (user_id) => {
     console.log("Deleting user:", user_id);
   
-    fetch(`http://127.0.0.1:5000/users/${user_id}`, {
+    fetch(`https://cooquie-journal.onrender.com/users/${user_id}`, {
       method: "DELETE",
       headers: {
         "Content-type": "application/json",

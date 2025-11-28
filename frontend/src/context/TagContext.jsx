@@ -11,7 +11,7 @@ export const TagProvider = ({ children }) => {
 
   // Fetch all tags
   const fetchTags = () => {
-    fetch("http://127.0.0.1:5000/tags", {
+    fetch("https://cooquie-journal.onrender.com/tags", {
       method: "GET",
       headers: {
         "Content-type": "application/json",
@@ -30,7 +30,7 @@ export const TagProvider = ({ children }) => {
 
   // Create a tag
   const addTag = async (name) => {
-    const response = await fetch("http://127.0.0.1:5000/tags", {
+    const response = await fetch("https://cooquie-journal.onrender.com/tags", {
       method: "POST",
       headers: {
         "Content-type": "application/json",
@@ -52,7 +52,7 @@ export const TagProvider = ({ children }) => {
 
   // Delete tag
   const deleteTag = async (tagId) => {
-    await fetch(`http://127.0.0.1:5000/tags/${tagId}`, {
+    await fetch(`https://cooquie-journal.onrender.com/tags/${tagId}`, {
       method: "DELETE",
       headers: {
         "Content-type": "application/json",
