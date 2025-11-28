@@ -14,7 +14,7 @@ The Client can:
 - View all the entries.
 - Create an entry.
 - Write, edit and delete their entries in real time.
-- Create an account and log in.
+- Create an account and log in using JWT Authentication that offers security and privacy.
 - Update their profile.
 
 ## Technologies used
