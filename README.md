@@ -1,11 +1,12 @@
 # Online-Journal Application - COOQUIE
 ## By Marion Nabulobi
 
-Cooquie is a full-stack web applicaton that allows users to journal their thoughts through a user-friendly interface. 
+Cooquie is a full-stack journal application designed to give users a calm, intuitive space to capture their thoughts. It pairs a smooth, responsive interface with a secure and efficient backend, creating a seamless journaling experience from end to end.
 
-The frontend of the application is built using React, leveraging the Context API to handle shared states while the backend is built using flask and python with SQLAlchemy.
+## Overview
+The frontend is crafted with React, using the Context API to manage shared state across the application. On the backend, Flask, Python, and SQLAlchemy work together to handle data persistence, authentication, and all server-side operations.
 
-Additionally, the interface is <strong>responsive</strong>, adapting smoothly to different screen sizes; whether viewed on desktop, tablet or a mobile device. 
+The interface gracefully adapts to any screen size — desktop, tablet, or mobile — ensuring that users can journal comfortably wherever they are.
 
 ## Features
 It only has one role: The Client.
@@ -14,17 +15,20 @@ The Client can:
 - View all the entries.
 - Create an entry.
 - Write, edit and delete their entries in real time.
-- Create an account and log in using JWT Authentication that offers security and privacy.
-- Update their profile.
+- Register an account and log in using JWT Authentication for security and privacy.
+- Update their user profile.
 
 ## Technologies used
 Since this is a Front-end project, I used the technologies below:
 - Backend
-  - FLASK, PYTHON AND SQLALCHEMY
+  - FLASK
+  - PYTHON
+  - SQLALCHEMY
     
 - Frontend
     - REACT
-    * The JavaScript Library enabled me to create a dynamic and responsive user interface. Additionally, building reusable components such as navigation bars, footers, and more to ensure consistency throughout the application.
+    * Used to build a dynamic, component-driven UI.
+    * Reusable components (navigation bar, footer, cards, etc.) ensure a cohesive and consistent design across the app.
 
 ## Setup Instructions
 1. Clone the repository to your VS Code.
